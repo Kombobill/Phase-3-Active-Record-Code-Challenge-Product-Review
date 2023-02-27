@@ -1,3 +1,6 @@
+require_relative 'config/application'
+
+
 # Define default task
 task :default => [:test]
 
