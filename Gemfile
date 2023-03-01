@@ -1,5 +1,17 @@
-source 'https://rubygems.org'
+source "https://rubygems.org/"
 
-gem 'rails', '6.1.3'
-gem 'pg', '1.2.3'
-gem 'bcrypt', '3.1.7'
+gem 'activerecord', '~> 7.0', '>= 7.0.4.2'
+
+gem 'rake', '~> 13.0', '>= 13.0.6'
+
+gem 'sqlite3', '~> 1.6', '>= 1.6.1'
+
+gem "sinatra-activerecord"
+
+gem 'require_all', '~> 3.0'
+
+group :development do
+  gem "pry"
+  
+  gem "faker", "~> 2.18"
+end
