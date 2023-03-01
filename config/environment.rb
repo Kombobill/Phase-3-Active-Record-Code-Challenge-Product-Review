@@ -1,11 +1,6 @@
-require 'bundler'
-Bundler.require
+ENV["RACK_ENV"] ||= "development"
 
-# establish database connection
-ActiveRecord::Base.establish_connection(
-  adapter: 'sqlite3',
-  database: 'db/development.sqlite'
-)
+require 'bundler/setup'
+Bundler.require(:default, ENV["RACK_ENV"])
 
-# load all files in the 'app' directory
-Dir[File.join(File.dirname(__FILE__), '../app', '*.rb')].each { |f| require f }
+require_all 'app/models'
