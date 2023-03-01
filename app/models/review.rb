@@ -2,15 +2,8 @@ class Review < ActiveRecord::Base
     belongs_to :user
     belongs_to :product
     
-    def user
-      # code for returning the user instance for this review
-    end
-    
-    def product
-      # code for returning the product instance for this review
-    end
-    
     def print_review
+      puts "Review for #{self.product.name} by #{self.user.name}: star_rating: #{self.star_rating}. comment: #{self.comment}"
       # code for printing this review in a specific format
     end
 end
