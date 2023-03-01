@@ -31,6 +31,20 @@ To add seed data to the database.Run
          rake db:seed
 ``` 
 
+## Running the Application
+
+To run the application, follow these steps:
+
+Install the required dependencies using bundler:
+
+ - `bundle install`
+
+Run the following command to test out the different methods and associations:
+
+- `rake console`
+- Then use `Review.all` , `Product.all`, `User.all`
+ 
+
 
 ## Usage
 
